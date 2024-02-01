@@ -1,0 +1,34 @@
+.catalog {
+    
+}
+.--catalog-line {
+    position: relative;
+    
+    top: 0;
+    left: 0;
+
+    &::before {
+		content: url(../img/2929.svg);
+		z-index: 20;
+		position: absolute;
+		width: 1440px;
+		height: 100px;
+		top: -420px;
+		left: 0px;
+	  }
+}
+
+.catalog__title {
+    color: #000;
+font-family: "Roboto Condensed";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+background: #7199FF;
+text-transform: uppercase;
+width: 315px;
+text-align: center;
+display: block;
+margin: 120px auto;
+}

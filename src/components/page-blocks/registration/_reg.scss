@@ -1,0 +1,518 @@
+*{box-sizing: border-box;}
+
+.container {
+    margin: 0 auto;
+    background-color: #000;
+    border: 4px solid #000;
+}
+
+
+/* header */
+
+.header {
+    display: flex;
+    width: 100%;
+}
+
+.header_logo-background {
+    width: 237px;
+    height: 93px;
+    background-color: white;
+    border-bottom: 4px solid #000;
+    border-right: 4px solid #000;
+}
+
+.header_logo {
+    display: flex;
+    flex-direction: column;
+    width: 137px;
+    height: 85px;
+    background-color: white;
+    margin: 4px 50px;
+}
+
+.header_img {  
+    width: 70.794px;
+    height: 49.893px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header_logo-text {
+    color: #000;
+    font-family: "Paytone One";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px auto;
+}
+
+.header_menu {
+    display: flex;
+    background: linear-gradient(270deg, #F960D8 30.07%, #FA61AB 47.83%, #FC6270 66.04%, #FE6505 84.26%, #FE6417 102.47%);
+    width: 100%;
+    height: 83px;
+    border-bottom: 4px solid #000;
+}
+
+.header_list {
+    width: 100%;
+    justify-content: space-between;
+    margin: 22px 60px;
+    list-style-type: none;
+    padding: 0;
+    align-self: center;
+}
+
+
+@media screen and (width > 744px ){
+    .header_list {
+        display: flex !important;
+    }
+}
+
+.header_list-item {
+    text-align: center;
+    font-family: "Roboto Condensed";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.header_list-link {
+    color: #000;
+}
+
+.header_list-link:hover {
+    color: #DBFE01
+}
+
+.header_list-link:active {
+    background-color: white;
+    color: #DBFE01
+}
+
+.header_list-item:nth-child(5) {
+    margin-right: 0px;
+}
+
+.header_list-item:last-child {
+    display: none;
+}
+
+.header_burger {
+    display: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 24px;
+    height: 24px;
+    margin: 3px 10px 0px 0px;
+}
+
+
+.header_burger-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #F860E8;
+}
+
+
+.header_burger-img.burger-active {
+    display: flex;
+}
+
+.header_list.burger-visible {
+    right: 4px;
+}
+
+@media screen and (width < 1440px ) and (width > 744px){
+    .header_logo-background {
+        width: 154px;
+        height: 88px;
+    }
+
+    .header_logo {
+        width: 81px;
+        height: 61px;
+        margin: 17px 41px 10px 32px;
+    }
+
+    .header_list-item {
+        font-size: 20px;
+        margin-right: 12px;
+    }
+
+    .header_img {  
+        width: 42px;
+        height: 33px;
+    }
+
+    .header_logo-text {
+        font-size: 12px;
+        margin-top: 9px;
+    }
+    
+    .header_menu {
+        display: flex;
+        height: 63px;
+    }
+
+    .header_list {
+        margin: 20px 10px;
+    }
+}
+
+@media screen and (width <= 744px){
+    .header_menu {
+        height: 33px;
+        justify-content: end;
+    }
+
+    .header_logo-background {
+        display: none;
+    }
+
+    .header_list {
+        display: flex;
+        position: fixed;
+        right: -400px;
+        top: 37px;
+        background: linear-gradient(180deg, #F860E8 0%, #FB6279 50%, #FE6508 100%);
+        width: 315px;
+        height: 500px;
+        flex-direction: column;
+        z-index: 1;
+        justify-content: center;
+        gap: 40px;
+        margin: 0;
+        border-left: 4px solid #000;
+        border-bottom: 4px solid #000;
+        transition: right 0.5s;
+    }
+
+    .header_list-item {
+        font-size: 24px;
+    }
+
+    .header_list-item:nth-child(5) {
+        display: none;
+    }
+    
+    .header_list-item:last-child {
+        display: block;
+    }
+
+    .header_burger {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        position: relative;
+    }
+}
+    
+
+
+/* page */
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 12px auto 0;
+}
+
+.page_logo {
+    display: none;
+    width: 102px;
+    height: 69px;
+    margin: 0 auto;
+}
+
+.page_img {
+    margin: 0px auto;
+    width: 1312px;
+    height: 341px;
+}
+
+.page_title {
+    display: none; 
+    color: #FFF;
+    text-align: center;
+    font-family: "Paytone One";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    font-size: 28px;
+    width: 269px;
+    margin: 13px auto 0px;
+}
+    
+.title_pink {
+    color: #F860ED;
+}
+    
+.title_green {
+    color: #DBFE01;
+}
+
+@media screen and (width < 1440px){
+    .page {
+        margin: 62px 0px 0px;
+    }
+
+    .page_img {
+        width: 675px;
+        height: 223px;
+    }
+
+}
+
+@media screen and (width <= 744px){
+    .page {
+        margin: 32px 0px 0px;
+    }
+
+    .page_img {
+        display: none;
+    }
+
+    .page_logo {
+        display: block;
+    }
+
+    .page_title {
+        display: block;
+    }
+
+}
+
+
+/* account */
+
+.account {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0px auto;
+}
+
+.account_title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.account_input-title {
+    color: #DBFE01;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 5px 4px;
+}
+
+.account_wrapper:nth-child(3) {
+    margin-top: 5px;
+}
+
+.account_wrapper:nth-child(4) {
+    margin-top: 15px;
+}
+
+.account_input {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.account_input:hover {
+    border: 3px solid #DBFE01;
+}
+
+.account_input:focus {
+    border: 3px solid #F860F5;
+    outline: none;
+}
+
+.account_mail {
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.account_confirmation {
+    display: flex;
+    margin-left: 9px;
+}
+
+.account_confirmation-information {
+    color: #FFF;
+    margin-left: 7px;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.account_disabled {
+    display: none;
+    color: #F85757;
+    text-align: center;
+    margin-top: 19px;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.account_login {
+    width: 100%;
+    height: 60px;
+    background: #DBFE01;
+    margin: 17px auto 0;
+    color: #000;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.account_login:hover {
+    background-color: #F860F5;
+}
+
+.account_login:active {
+    border: #F860F5 5px solid;
+    background-color: #DBFE01;
+}
+
+.account_registering {
+    margin: 8px auto;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.account_registering-link {
+    color: #FFF;
+}
+
+.account_registering-link:hover {
+    color: #DBFE01
+}
+
+.account_registering-link:active {
+    background-color: #DBFE01;
+    color: white
+}
+
+
+@media screen and (width < 1440px){
+    .account {
+        width: 438px;
+        margin-top: 31px;
+    }
+
+    .account_wrapper:nth-child(3) {
+        margin-top: 32px;
+    }
+    
+    .account_wrapper:nth-child(4) {
+        margin-top: 38px;
+    }
+
+    .account_disabled {
+        margin-top: 40px;
+    }
+
+    .account_login {
+        margin-top: 60px;
+    }
+
+    .account_registering {
+        margin: 13px auto 50px;
+    }
+}
+
+@media screen and (width <= 744px){
+    .account {
+        width: 270px;
+        margin-top: 32px;
+    }
+
+    .account_title {
+        font-size: 20px;
+    }
+
+    .account_wrapper:nth-child(3) {
+        margin-top: 12px;
+    }
+    
+    .account_wrapper:nth-child(4) {
+        margin-top: 12px;
+    }
+
+    .account_mail {
+        font-size: 13px;
+    }
+
+    .account_disabled {
+        font-size: 16px;
+    }
+
+    .account_confirmation-information {
+        font-size: 12px;
+    }
+
+    .account_input-title {
+        font-size: 16px;
+    }
+
+    .account_login {
+        margin-top: 43px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .account_registering {
+        margin: 14px auto 108px;
+        font-size: 13px;
+    }
+
+    .account_input {
+        height: 38px;
+        font-size: 16px;
+    }
+    
+}
