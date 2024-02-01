@@ -129,10 +129,31 @@ inventDate.textContent = `${date} ${nameMonth[month]}`;
 
 
 */
+
+//header формы
+
+const buttonMenu = document.querySelector('.mini-header_burger'),
+headerlist = document.querySelector('.mini-header_list'),
+burgerImg = document.querySelectorAll('.mini-header_burger-img'),
+burgerImgChange = () => {
+    headerlist.classList.toggle('burger-visible')
+    burgerImg[0].classList.toggle('burger-active')
+    burgerImg[1].classList.toggle('burger-active')
+}
+
+if (buttonMenu != null) {
+    buttonMenu.addEventListener('click', burgerImgChange);
+}
+
+
+// другой header
+
 let menuBtn = document.querySelector('.menu__burger');
 let menu = document.querySelector('.menu__list');
 
-menuBtn.addEventListener('click', function(){
-	menuBtn.classList.toggle('active');
-	menu.classList.toggle('active');
-})
+if (menuBtn != null) {
+    menuBtn.addEventListener('click', function(){
+        menuBtn.classList.toggle('active');
+        menu.classList.toggle('active');
+    })
+}

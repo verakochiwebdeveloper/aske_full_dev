@@ -1,243 +1,33 @@
-.autorization {
-    
-}
+*{box-sizing: border-box;}
+
 .container {
     margin: 0 auto;
-    background-color: #000;
-    border: 4px solid #000;
-    width: 1430px;
-    
-}
-
-
-/* header */
-
-.header {
-    display: flex;
-    width: 100%;
-}
-
-.header_logo-background {
-    width: 237px;
-    height: 135px;
-    background-color: white;
-    border-bottom: 4px solid #000;
+    background-color: #2A2929;
     border-right: 4px solid #000;
-}
-
-.header_logo {
-    display: flex;
-    flex-direction: column;
-    width: 137px;
-    height: 92px;
-    background-color: white;
-    margin: 22px 50px;
-}
-
-.header_img {  
-    width: 70.794px;
-    height: 49.893px;
-    margin: 0 auto;
-    background-color: white;
-}
-
-.header_logo-text {
-    color: #000;
-    font-family: 'Paytone One';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 13px auto 0;
-}
-
-.header_menu {
-    display: flex;
-    background: linear-gradient(270deg, #F960D8 30.07%, #FA61AB 47.83%, #FC6270 66.04%, #FE6505 84.26%, #FE6417 102.47%);
-    width: 100%;
-    height: 83px;
+    border-left: 4px solid #000;
     border-bottom: 4px solid #000;
+    max-width: 1430px;
+
 }
-
-.header_list {
-    width: 100%;
-    justify-content: space-between;
-    margin: 22px 60px;
-    list-style-type: none;
-    padding: 0;
-    align-self: center;
-}
-
-
-@media screen and (width > 744px ){
-    .header_list {
-        display: flex !important;
-    }
-}
-
-.header_list-item {
-    text-align: center;
-    font-family: "Roboto Condensed";
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-.header_list-link {
-    color: #000;
-}
-
-.header_list-link:hover {
-    color: #DBFE01
-}
-
-.header_list-link:active {
-    background-color: white;
-    color: #DBFE01
-}
-
-.header_list-item:nth-child(5) {
-    margin-right: 0px;
-}
-
-.header_list-item:last-child {
-    display: none;
-}
-
-.header_burger {
-    display: none;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    width: 24px;
-    height: 24px;
-    margin: 3px 10px 0px 0px;
-}
-
-
-.header_burger-img {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: #F860E8;
-}
-
-
-.header_burger-img.burger-active {
-    display: flex;
-}
-
-.header_list.burger-visible {
-    right: 4px;
-}
-
-@media screen and (width < 1440px ) and (width > 744px){
-    .header_logo-background {
-        width: 154px;
-        height: 88px;
-    }
-
-    .header_logo {
-        width: 81px;
-        height: 61px;
-        margin: 17px 41px 10px 32px;
-    }
-
-    .header_list-item {
-        font-size: 20px;
-        margin-right: 12px;
-    }
-
-    .header_img {  
-        width: 42px;
-        height: 33px;
-    }
-
-    .header_logo-text {
-        font-size: 12px;
-        margin-top: 9px;
-    }
-    
-    .header_menu {
-        display: flex;
-        height: 63px;
-    }
-
-    .header_list {
-        margin: 20px 10px;
-    }
-}
-
-@media screen and (width <= 744px){
-    .header_menu {
-        height: 33px;
-        justify-content: end;
-    }
-
-    .header_logo-background {
-        display: none;
-    }
-
-    .header_list {
-        display: flex;
-        position: fixed;
-        right: -400px;
-        top: 37px;
-        background: linear-gradient(180deg, #F860E8 0%, #FB6279 50%, #FE6508 100%);
-        width: 315px;
-        height: 500px;
-        flex-direction: column;
-        z-index: 1;
-        justify-content: center;
-        gap: 40px;
-        margin: 0;
-        border-left: 4px solid #000;
-        border-bottom: 4px solid #000;
-        transition: right 0.5s;
-    }
-
-    .header_list-item {
-        font-size: 24px;
-    }
-
-    .header_list-item:nth-child(5) {
-        display: none;
-    }
-    
-    .header_list-item:last-child {
-        display: block;
-    }
-
-    .header_burger {
-        display: flex;
-        width: 24px;
-        height: 24px;
-        position: relative;
-    }
-}
-    
-
 
 /* page */
 
 
-.page {
+.page-autorization {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: -38px 0px 0px;
 }
 
-.page_logo {
+.page_logo-autorization {
     display: none;
     width: 102px;
     height: 69px;
     margin: 0 auto;
 }
 
-.page_title {
+.page_title-autorization {
     color: #FFF;
     text-align: center;
     font-family: "Roboto";
@@ -260,45 +50,42 @@
     color: #DBFE01;
 }
 
-.page_img {
+.page_img-autorization {
     margin: 0px 23px 0px 60px;
     width: calc(100% - 83px);
     height: 402px;
 }
 
 @media screen and (width < 1440px){
-    .page {
-        margin: 22px 0px 0px;
+    .page-autorization {
+        margin: 0px;
     }
 
-    .page_img {
+    .page_img-autorization {
         margin: 37px auto 0px;
         width: 675px;
         height: 223px;
     }
 
-    .page_title {
+    .page_title-autorization {
         font-size: 40px;
         width: 451px;
         height: 105px;
-        margin: 0px auto;
+        margin: 22px auto 0;
     }
 }
 
-@media screen and (width <= 744px){
-    .page {
-        margin: 32px 0px 0px;
-    }
-
-    .page_img {
+@media screen and (width < 744px){
+    .page_img-autorization {
         display: none;
     }
 
-    .page_logo {
+    .page_logo-autorization {
+        margin: 32px auto;
         display: block;
     }
 
-    .page_title {
+    .page_title-autorization {
         font-size: 28px;
         width: 269px;
         height: 85px;
@@ -309,14 +96,14 @@
 
 /* account */
 
-.account {
+.account-autorization {
     display: flex;
     flex-direction: column;
     width: 500px;
     margin: 21px auto 0px;
 }
 
-.account_input-title {
+.account_input-title-autorization {
     color: #DBFE01;
     font-family: "Roboto";
     font-size: 24px;
@@ -326,15 +113,15 @@
     margin: 0 0 5px 4px;
 }
 
-.account_wrapper {
-    margin-bottom: 21px;
+.account_wrapper-autorization {
+    margin-top: 21px;
 }
 
-.account_wrapper:last-of-type {
+.account_wrapper-autorization:last-of-type {
     margin-bottom: 9px;
 }
 
-.account_input {
+.account_input-autorization {
     display: flex;
     width: 100%;
     height: 60px;
@@ -347,16 +134,16 @@
     line-height: normal;
 }
 
-.account_input:hover {
+.account_input-autorization:hover {
     border: 3px solid #DBFE01;
 }
 
-.account_input:focus {
+.account_input-autorization:focus {
     border: 3px solid #F860F5;
     outline: none;
 }
 
-.account_forgot {
+.account_forgot-autorization {
     display: flex;
     font-family: "Roboto";
     font-size: 16px;
@@ -367,20 +154,20 @@
     margin: 0px 5px 0px;
 }
 
-.account_forgot-link {
+.account_forgot-link-autorization {
     color: #FFF;
 }
 
-.account_forgot-link:hover {
+.account_forgot-link-autorization:hover {
     color: #DBFE01
 }
 
-.account_forgot-link:active {
+.account_forgot-link-autorization:active {
     background-color: #DBFE01;
     color: white
 }
 
-.account_incorrect {
+.account_incorrect-autorization {
     display: none;
     width: 254px;
     margin: 17px auto 0;
@@ -393,7 +180,7 @@
     line-height: normal;
 }
 
-.account_login {
+.account_login-autorization {
     width: 100%;
     height: 60px;
     background: #DBFE01;
@@ -408,16 +195,16 @@
     cursor: pointer;
 }
 
-.account_login:hover {
+.account_login-autorization:hover {
     background-color: #F860F5;
 }
 
-.account_login:active {
+.account_login-autorization:active {
     border: #F860F5 5px solid;
     background-color: #DBFE01;
 }
 
-.account_registering {
+.account_registering-autorization {
     margin: 8px auto;
     text-align: center;
     font-family: "Roboto";
@@ -427,68 +214,68 @@
     line-height: normal;
 }
 
-.account_registering-link {
+.account_registering-link-autorization {
     color: #FFF;
 }
 
-.account_registering-link:hover {
+.account_registering-link-autorization:hover {
     color: #DBFE01
 }
 
-.account_registering-link:active {
+.account_registering-link-autorization:active {
     background-color: #DBFE01;
     color: white
 }
 
 @media screen and (width < 1440px){
-    .account {
+    .account-autorization {
         width: 438px;
         margin-top: 97px;
     }
 
-    .account_incorrect {
+    .account_incorrect-autorization {
         margin: 37px auto 0;
     }
 
-    .account_login {
+    .account_login-autorization {
         margin-top: 50px;
     }
 
-    .account_registering {
+    .account_registering-autorization {
         margin: 76px auto 106px;
     }
 }
 
-@media screen and (width <= 744px){
-    .account {
+@media screen and (width < 744px){
+    .account-autorization {
         width: 270px;
         margin-top: 54px;
     }
 
-    .account_input-title {
+    .account_input-title-autorization {
         font-size: 16px;
     }
 
-    .account_forgot {
+    .account_forgot-autorization {
         font-size: 13px;
     }
 
-    .account_incorrect {
+    .account_incorrect-autorization {
         margin: 44px auto 0;
     }
 
-    .account_login {
+    .account_login-autorization {
         margin-top: 61px;
         height: 48px;
         font-size: 16px;
     }
 
-    .account_registering {
+    .account_registering-autorization {
         margin: 17px auto 102px;
         font-size: 13px;
     }
 
-    .account_input {
+    .account_input-autorization {
         height: 48px;
         font-size: 16px;
     }
