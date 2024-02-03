@@ -49,7 +49,7 @@ body {
 
 body {
 	color: #000;
-
+	
 }
 
 ul,
@@ -69,8 +69,7 @@ a {
 	text-decoration: none;
 }
 
-ul,
-li {
+ul,li {
 	list-style: none;
 	padding: 0;
 }
@@ -80,27 +79,38 @@ li {
 	margin: 0 auto;
 	border: 4px solid #000;
 	overflow: hidden;
+	  
 }
 
 .--bg-post-marker {
+	width: 1430px;
+	margin: 0 auto;
 	position: relative;
-
-	&::before {
+	
+	  &::before {
 		content: url(../img/postkl.svg);
 		z-index: 20;
 		position: absolute;
 		width: 524px;
 		height: 100px;
 		top: -95px;
-		left: 1000px;
-	}
+		left: 762px;
+	  }
 }
+
+
+
+
+
+
+
+
 
 
 
 .--container-color-black {
 	background-color: #000;
-}
+} 
 
 .--container-color-gray {
 	background: #D7D7D7;
@@ -126,7 +136,7 @@ li {
 
 .--padding__posts {
 	padding: 0 160px;
-}
+} 
 
 .--bg-color-lightgreen {
 	background: #DBFE01;
@@ -145,37 +155,37 @@ li {
 
 .--link-style {
 	border: 2px solid #000;
-	background: #e45201;
-	box-shadow: 0px 2px 2px 0px #000;
-	color: #030303;
-	font-family: "Roboto";
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	padding: 12px 24px;
-	display: block;
-	margin-top: 50px;
+  background: #e45201;
+  box-shadow: 0px 2px 2px 0px #000;
+  color: #030303;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 12px 24px;
+  display: block;
+  margin-top: 50px;
 
-	&:hover {
-		background: #fff;
-		transition: ease-in-out 0.2s
-	}
+  &:hover {
+    background: #fff;
+    transition: ease-in-out 0.2s
+  }
 
-	&:active {
-		border: 2px solid #E45201;
-		color: #E45201;
-	}
+  &:active {
+    border: 2px solid #E45201;
+    color: #E45201;
+  }
 }
 
 .--border-mod-none {
-	border-right: none;
-	border-bottom: none;
+	border-right:none;
+	border-bottom:none;
 }
 
 .--green-button {
 	color: #111;
-
+  
 	font-family: "Roboto", sans-serif;
 	font-size: 25px;
 	font-style: normal;
@@ -188,20 +198,14 @@ li {
 	display: block;
 	margin: 100px auto;
 	width: 384px;
-
+  
 	&:hover {
-		transition: ease-in 0.2s;
-		background: #fff;
+	  transition: ease-in 0.2s;
+	  background: #fff;
 	}
-
+  
 	&:active {
-		background: #000;
-		color: #fff;
+	  background: #000;
+	  color: #fff;
 	}
-}
-
-
-
-// office
-
-
+  }

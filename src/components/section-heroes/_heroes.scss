@@ -64,14 +64,24 @@
   }
 }
 
-.heroes__wrapper:after {
+
+.heroes__line {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1430px;
+  margin: 0 auto;
+}
+
+.heroes__line:after {
   position: absolute;
   content: url(../img/klline.svg);
-  width: 1400px;
+  width: 1430px;
   height: 100%;
-  z-index: 5;
-  top: -279px;
-  left: 239px;
+  z-index: 52;
+  top: 900px;
+  left:0;
+  overflow: hidden;
 }
 
 .heroes__item {
