@@ -12,7 +12,9 @@
   display: block;
 }
 
-
+.menu {
+  background: linear-gradient(270deg, #f860e6 0%, #e45201 100%); 
+}
 
 .menu__list {
   width: 1156px;
@@ -55,13 +57,6 @@
     padding-top: 44px;
     padding-bottom: 149px;
     color: #030303;
-  }
-
-  &-image {
-    width: 1141px;
-    height: 474px;
-    object-fit: cover;
-    object-position: center;
   }
 
   &-title {
@@ -128,5 +123,7 @@
     font-size: 312px;
   }
 }
+
+
 
 

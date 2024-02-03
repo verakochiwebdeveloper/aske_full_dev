@@ -16,10 +16,6 @@
     font-size: 25px;
   }
 
-  .header__title {
-    top: 1101px;
-  }
-
   .header__title-horizontal {
     font-size: 270px;
   }
@@ -33,11 +29,10 @@
 
   .heroes__line::after {
     width: 1280px;
-    top: 880px;
   }
 
   .heroes__item-cover {
-    width: 640px;
+    width: 620px;
     height: 577px;
     padding: 20px 75px;
     height: 606px;
@@ -46,10 +41,6 @@
   .heroes__item-title {
     font-size: 26px;
     top: 15%;
-  }
-
-  .heroes__search {
-    padding: 165px 115px;
   }
 
   .--bg-post-marker::before {
@@ -63,30 +54,18 @@
   }
 
   .heroes__line {
-    width: 1280;
+    width: 900px;
   }
 
   .heroes__line::after {
-    width: 1280px;
+    width: 900px;
   }
 }
 
 // Малые девайсы («ландшафтные», < 768px)
 @media (max-width: 767.98px) {
   .full__container {
-    max-width: 767px;
-  }
-
-  .menu__list {
-    width: 588px;
-  }
-
-  .menu__list-item:first-child {
-    margin-left: 10px;
-  }
-
-  .menu__list-item:last-child {
-    margin-right: 10px;
+    width: 760px;
   }
 
   .heroes__line {
@@ -98,132 +77,18 @@
   }
 
   .logo__image {
-    width: 156px;
+    width: 181px;
   }
   .menu__list {
-    width: 602px;
+    width: 588px;
   }
   .menu__list-link {
     font-size: 20px;
   }
 
- 
-
-  .header__about-image {
-    width: 599px;
-    height: 260px;
-  }
-
-  .header__title {
-    top: 659px;
-    font-size: 230px;
-    width: 767px;
-    right: 937px;
-  }
-
-  .header__about {
-    &-background {
-      width: 767px;
-      height: 70px;
-    }
-  }
-
-  .header__about-title {
-    font-size: 20px;
-    width: 600px;
-  }
-
-  .header__title-vertical {
-    right: -561px;
-    top: 25px;
-    font-size: 240px;
-  }
-  .header__title-horizontal {
-    font-size: 150px;
-    top: -70px;
-    right: 10px;
-  }
-
-  .header__about-wrapper {
-    word-break: 20px;
-    padding-bottom: 2px;
-  }
-
-  .header__about {
-    
-    &-title {
-      width: 550px;
-      margin-left: 40px;
-    }
-    margin: 0;
-    &-text {
-      margin: 35px 0px 50px 70px ;
-      text-indent: 0;
-      width: 420px;
-      &:first-child {
-        margin-bottom: 25px;
-      }
-    }
-  }
-
-  .heroes__line::after {
-    top: 570px;
-    width: 760px;
-  }
-
   .heroes__wrapper {
-    &-left, &-right {
-      width: 370px;
-    }
+    display: block;
   }
-
-  .heroes__title {
-    width: 360px;
-    font-size: 50px;
-  }
-
-  .heroes__item-cover {
-    width: 370px;
-    height: 375px;
-    padding: 10px 50px;
-  }
-
-  .heroes__item-pic {
-    width: 11rem;
-    height: 18rem;
-  }
-
-  .heroes__item-title {
-    width: 131px;
-    height: 74px;
-    font-size: 20px;
-  }
-
-  .heroes__item-link {
-    padding: 7px;
-    margin-top: 20px;
-    font-size: 16px;
-  }
-
-  .heroes__itme-label {
-    width: 40%;
-    bottom: 83px;
-  }
-
-  .heroes__item-block {
-    margin-top: 35px;
-  }
-
-  .heroes__search{
-      padding: 50px 50px;
-    }
-
-    .heroes__item-text {
-      font-family: "Roboto";
-      font-size: 18px;
-      font-weight: 500;
-    }
-  
 }
 
 // Экстрамалые девайсы («телефоны», < 576px)
@@ -266,7 +131,9 @@
     justify-content: center;
     border: solid 4px #000;
     transform: translateX(250px);
-    
+    &-item {
+      
+    }
   }
 
   .menu__burger {
@@ -313,17 +180,20 @@
     display: block;
     transform: translateX(40px);
     transition: ease-in-out 0.5s;
+
   }
 
-  .menu__burger.active div::after {
+  .menu__burger.active  div::after {
     transform: rotate(-45deg);
     top: 0;
   }
 
-  .menu__burger.active div::before {
+  .menu__burger.active  div::before {
     transform: rotate(45deg);
     top: 0;
   }
+
+
 
   .header__about-image {
     width: 281px;
