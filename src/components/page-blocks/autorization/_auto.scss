@@ -1,33 +1,231 @@
 *{box-sizing: border-box;}
 
+body {
+    
+}
+
+input:hover {
+    border: 3px solid #F860F5;
+}
+
+input:focus {
+    border: 3px solid #DBFE01;
+    outline: none;
+}
+button:active {
+    background-color: #F860F5;
+}
+
 .container {
     margin: 0 auto;
-    background-color: #2A2929;
-    border-right: 4px solid #000;
-    border-left: 4px solid #000;
-    border-bottom: 4px solid #000;
-    max-width: 1430px;
-
+    
+    border: 4px solid #000;
 }
+
+
+/* header */
+
+.header {
+    display: flex;
+    width: 100%;
+}
+
+.header_logo-background {
+    width: 237px;
+    height: 135px;
+    background-color: white;
+    border-bottom: 4px solid #000;
+    border-right: 4px solid #000;
+}
+
+.header_logo {
+    display: flex;
+    flex-direction: column;
+    width: 137px;
+    height: 92px;
+    background-color: white;
+    margin: 22px 50px;
+}
+
+.header_img {  
+    width: 70.794px;
+    height: 49.893px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header_logo-text {
+    color: #000;
+    font-family: Paytone One;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 13px auto 0;
+}
+
+.header_menu {
+    display: flex;
+    background: linear-gradient(270deg, #F960D8 30.07%, #FA61AB 47.83%, #FC6270 66.04%, #FE6505 84.26%, #FE6417 102.47%);
+    width: 100%;
+    height: 83px;
+    border-bottom: 4px solid #000;
+}
+
+.header_list {
+    width: 100%;
+    justify-content: space-between;
+    margin: 22px 60px;
+    list-style-type: none;
+    padding: 0;
+    align-self: center;
+}
+
+@media screen and (width > 744px ){
+    .header_list {
+        display: flex !important;
+    }
+}
+
+.header_list-item {
+    color: #000;
+    text-align: center;
+    font-family: "Roboto Condensed";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.header_list-item:nth-child(5) {
+    margin-right: 0px;
+}
+
+.header_list-item:last-child {
+    display: none;
+}
+
+.header_burger {
+    display: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 24px;
+    height: 24px;
+    margin: 3px 10px 0px 0px;
+}
+
+
+.header_burger-img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (width < 1440px ) and (width > 744px){
+    .header_logo-background {
+        width: 154px;
+        height: 88px;
+    }
+
+    .header_logo {
+        width: 81px;
+        height: 61px;
+        margin: 17px 41px 10px 32px;
+    }
+
+    .header_list-item {
+        font-size: 20px;
+        margin-right: 12px;
+    }
+
+    .header_img {  
+        width: 42px;
+        height: 33px;
+    }
+
+    .header_logo-text {
+        font-size: 12px;
+        margin-top: 9px;
+    }
+    
+    .header_menu {
+        display: flex;
+        height: 63px;
+    }
+
+    .header_list {
+        margin: 20px 10px;
+    }
+}
+
+@media screen and (width <= 744px){
+    .header_menu {
+        height: 33px;
+        justify-content: end;
+    }
+
+    .header_logo-background {
+        display: none;
+    }
+
+    .header_list {
+        display: none;
+        position: absolute;
+        right: 4px;
+        top: 37px;
+        background: linear-gradient(180deg, #F860E8 0%, #FB6279 50%, #FE6508 100%);
+        width: 315px;
+        height: 500px;
+        flex-direction: column;
+        z-index: 1;
+        justify-content: center;
+        gap: 40px;
+        margin: 0;
+        border-left: 4px solid #000;
+        border-bottom: 4px solid #000;
+    }
+
+    .header_list-item {
+        font-size: 24px;
+    }
+
+    .header_list-item:nth-child(5) {
+        display: none;
+    }
+    
+    .header_list-item:last-child {
+        display: block;
+    }
+
+    .header_burger {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        position: relative;
+    }
+}
+    
+
 
 /* page */
 
 
-.page-autorization {
+.page {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: -38px 0px 0px;
+    margin: -25px auto 0;
 }
 
-.page_logo-autorization {
+.page_logo {
     display: none;
     width: 102px;
     height: 69px;
     margin: 0 auto;
 }
 
-.page_title-autorization {
+.page_title {
     color: #FFF;
     text-align: center;
     font-family: "Roboto";
@@ -50,42 +248,45 @@
     color: #DBFE01;
 }
 
-.page_img-autorization {
-    margin: 0px 23px 0px 60px;
+.page_img {
+    margin: 18px 23px 0px 60px;
     width: calc(100% - 83px);
     height: 402px;
 }
 
 @media screen and (width < 1440px){
-    .page-autorization {
-        margin: 0px;
+    .page {
+        margin: 24px 0px 0px;
     }
 
-    .page_img-autorization {
+    .page_img {
         margin: 37px auto 0px;
         width: 675px;
         height: 223px;
     }
 
-    .page_title-autorization {
+    .page_title {
         font-size: 40px;
         width: 451px;
         height: 105px;
-        margin: 22px auto 0;
+        margin: 0px auto;
     }
 }
 
-@media screen and (width < 744px){
-    .page_img-autorization {
+@media screen and (width <= 744px){
+    .page {
+        margin: 32px 0px 0px;
+    }
+
+    .page_img {
         display: none;
     }
 
-    .page_logo-autorization {
-        margin: 32px auto;
+    .page_logo {
         display: block;
     }
 
-    .page_title-autorization {
+    .page_title {
         font-size: 28px;
         width: 269px;
         height: 85px;
@@ -96,14 +297,14 @@
 
 /* account */
 
-.account-autorization {
+.account {
     display: flex;
     flex-direction: column;
     width: 500px;
     margin: 21px auto 0px;
 }
 
-.account_input-title-autorization {
+.account_input-title {
     color: #DBFE01;
     font-family: "Roboto";
     font-size: 24px;
@@ -113,15 +314,15 @@
     margin: 0 0 5px 4px;
 }
 
-.account_wrapper-autorization {
-    margin-top: 21px;
+.account_wrapper {
+    margin-bottom: 21px;
 }
 
-.account_wrapper-autorization:last-of-type {
+.account_wrapper:last-of-type {
     margin-bottom: 9px;
 }
 
-.account_input-autorization {
+.account_input {
     display: flex;
     width: 100%;
     height: 60px;
@@ -134,17 +335,9 @@
     line-height: normal;
 }
 
-.account_input-autorization:hover {
-    border: 3px solid #DBFE01;
-}
-
-.account_input-autorization:focus {
-    border: 3px solid #F860F5;
-    outline: none;
-}
-
-.account_forgot-autorization {
+.account_forgot {
     display: flex;
+    color: #FFF;
     font-family: "Roboto";
     font-size: 16px;
     font-style: normal;
@@ -154,37 +347,11 @@
     margin: 0px 5px 0px;
 }
 
-.account_forgot-link-autorization {
-    color: #FFF;
-}
-
-.account_forgot-link-autorization:hover {
-    color: #DBFE01
-}
-
-.account_forgot-link-autorization:active {
-    background-color: #DBFE01;
-    color: white
-}
-
-.account_incorrect-autorization {
-    display: none;
-    width: 254px;
-    margin: 17px auto 0;
-    color: #F85757;
-    text-align: center;
-    font-family: "Roboto";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.account_login-autorization {
+.account_login {
     width: 100%;
     height: 60px;
     background: #DBFE01;
-    margin: 26px auto 0;
+    margin: 46px auto 0;
     color: #000;
     text-align: center;
     font-family: "Roboto";
@@ -192,20 +359,11 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    cursor: pointer;
 }
 
-.account_login-autorization:hover {
-    background-color: #F860F5;
-}
-
-.account_login-autorization:active {
-    border: #F860F5 5px solid;
-    background-color: #DBFE01;
-}
-
-.account_registering-autorization {
-    margin: 8px auto;
+.account_registering {
+    margin: 13px auto 17px;
+    color: #FFF;
     text-align: center;
     font-family: "Roboto";
     font-size: 16px;
@@ -214,68 +372,47 @@
     line-height: normal;
 }
 
-.account_registering-link-autorization {
-    color: #FFF;
-}
-
-.account_registering-link-autorization:hover {
-    color: #DBFE01
-}
-
-.account_registering-link-autorization:active {
-    background-color: #DBFE01;
-    color: white
-}
-
 @media screen and (width < 1440px){
-    .account-autorization {
+    .account {
         width: 438px;
         margin-top: 97px;
     }
 
-    .account_incorrect-autorization {
-        margin: 37px auto 0;
+    .account_login {
+        margin-top: 76px;
     }
 
-    .account_login-autorization {
-        margin-top: 50px;
-    }
-
-    .account_registering-autorization {
+    .account_registering {
         margin: 76px auto 106px;
     }
 }
 
-@media screen and (width < 744px){
-    .account-autorization {
+@media screen and (width <= 744px){
+    .account {
         width: 270px;
         margin-top: 54px;
     }
 
-    .account_input-title-autorization {
+    .account_input-title {
         font-size: 16px;
     }
 
-    .account_forgot-autorization {
+    .account_forgot {
         font-size: 13px;
     }
 
-    .account_incorrect-autorization {
-        margin: 44px auto 0;
-    }
-
-    .account_login-autorization {
-        margin-top: 61px;
+    .account_login {
+        margin-top: 141px;
         height: 48px;
         font-size: 16px;
     }
 
-    .account_registering-autorization {
+    .account_registering {
         margin: 17px auto 102px;
         font-size: 13px;
     }
 
-    .account_input-autorization {
+    .account_input {
         height: 48px;
         font-size: 16px;
     }
