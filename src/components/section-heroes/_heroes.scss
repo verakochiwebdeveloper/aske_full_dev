@@ -6,8 +6,7 @@
     margin-top: 174px;
     &-right,
     &-left {
-      
-      width: 720px
+      justify-content: center;
       
     }
   }
@@ -65,25 +64,14 @@
   }
 }
 
-
-.heroes__line {
-  position: relative;
-  top: 0;
-  left: 0;
-  max-width: 1430px;
-  margin: 0 auto;
-}
-
-.heroes__line:after {
+.heroes__wrapper:after {
   position: absolute;
-  content:"";
-  width: 1430px;
-  height: 380px;
-  background: url(../img/klline.svg);
-  z-index: 52;
-  top: 900px;
-  left:0;
-  overflow: hidden;
+  content: url(../img/klline.svg);
+  width: 1400px;
+  height: 100%;
+  z-index: 5;
+  top: -279px;
+  left: 239px;
 }
 
 .heroes__item {
