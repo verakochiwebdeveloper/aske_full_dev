@@ -1,98 +1,319 @@
-.calendar-center {
-    padding: 50px;
+// .calendar-center {
+//     padding: 50px;
+//     margin: 0 auto;
+//     text-align: center;
+// }
+// .calendar {
+//     margin: 0;
+//     display: grid;
+//     width: 250px;
+//     height: 250px;
+//     border: 2px solid black;
+//     grid-template-columns: repeat(7, 1fr);
+//     grid-template-rows: repeat(6, 1fr);
+//     padding: 0;
+//     justify-content: center;
+//     margin: 0 auto;
+// }
+
+// .calendar_day {
+//     width: 100%;
+//     height: 100%;
+//     list-style-type: none;
+//     border: 2px solid black;
+//     text-align: center;
+// }
+
+// .othermonth {
+//     color: #c0c0c0
+// }
+
+// .invent_list {
+//     margin: 0;
+//     padding: 0;
+// }
+
+
+// .popup {
+//     position: absolute;
+//     top: 30%;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     display: none;
+//     width: 400px;
+//     border: 2px solid black;
+//     z-index: 1;
+//     background-color: aliceblue;
+// }
+
+// .popup_input {
+//     width: 90%;
+//     margin-top: 20px;
+//     align-self: center;
+// }
+
+// .popup_button {
+//     width: 70%;
+//     margin: 20px 0px;
+//     align-self: center;
+// }
+
+// .popup_button_active {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .table {
+//     display: flex;
+//     margin-top: 20px;
+// }
+
+// .invent {
+//     display: flex;
+//     flex-direction: column;
+//     width: 200px;
+//     min-height: 300px;
+//     border: 2px solid black;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// .invent_data {
+//     list-style-type: none;
+//     width: 100%;
+//     border-bottom: 2px solid black;
+//     text-align: center;
+//     margin: 0;
+// }
+
+// .invent_none {
+//     list-style-type: none;
+//     text-align: center;
+// }
+
+// .invent_list_element {
+//     list-style-type: none;
+//     text-align: center;
+// }
+
+
+
+.calendar { 
     margin: 0 auto;
-    text-align: center;
+    background-color: #D9D9D9;
+    height: 100%;
+    max-width: 1430px;
+    width: 100%;
+    border-right: 4px black solid;
+    border-left: 4px black solid;
+    border-bottom: 4px black solid;
 }
-.calendar {
-    margin: 0;
-    display: grid;
-    width: 250px;
-    height: 250px;
-    border: 2px solid black;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    padding: 0;
+
+.calendar_title {
+    width: 449px;
+    margin: -21px auto 0px;
+    background-color: #7199FF;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.calendar_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.calendar_table {
+    border: 4px black solid;
+    margin: 57.5px 43px 0px 51px;
+    padding: 20px 0px 0px;
+    background-color: white;
+    width: 801px;
+    height: 627px;
+}
+
+.calendar_months {
+    display: flex;
+    margin: 0 220px 0;
     justify-content: center;
-    margin: 0 auto;
+}
+
+.calendar_strelka {
+    align-self: center;
+    height: 15px;
+    width: 23px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.calendar_month {
+    color: black;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 220px 0;
+}
+
+.calendar_name-day {
+    color: #B3B3B3;
+    text-align: center;
+    align-self: center;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.calendar_days {
+    display: grid;
+    height: calc(100% - 34px);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
 }
 
 .calendar_day {
-    width: 100%;
-    height: 100%;
-    list-style-type: none;
-    border: 2px solid black;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    color: black;
     text-align: center;
+    align-self: center;
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 46px;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
+
+.invent_title-wrapper {
+    display: flex;
+    background: #DBFE01;
+    width: 500px;
+    height: 67px;
+    margin: 57.5px 0px 0px;
+    border: 4px solid var(--black, #000);
+    padding: 10px;
+}
+
+.invent_title {
+    color: black;
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #DBFE01;
+    align-self: center;
+}
+
+.inventlist {
+    min-height: 50px;
+    background-color: white;
+    margin: 0;
+    border-bottom: 4px solid var(--black, #000);
+    border-left: 4px solid var(--black, #000);
+    border-right: 4px solid var(--black, #000);
+}
+
+.inventlist-none {
+    background-color: #F1F1F1;
+    margin: 0;
+    height: 556px;
+}
+
+.inventlist-none_title {
+    width: 488px;
+    color: black;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 50px 0 0;
+    margin: 0 auto;
+}
+
+.inventlist_smile {
+    display: flex;
+    width: 170px;
+    height: 170px;
+    margin: 103px auto 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.border_date {
+    border: 2px solid black;
+}
+
+.background_date {
+    background: #E45202;
+}
+
+.display_none {
+    display: none;
+}
+
+.red {
+    background-color: red;
+}
+
 
 .othermonth {
-    color: #c0c0c0
+    color: #B3B3B3 !important;
+    cursor: auto;
 }
 
-.invent_list {
-    margin: 0;
-    padding: 0;
+.calendar_pink {
+    color: #F860F5;
 }
 
-
-.popup {
-    position: absolute;
-    top: 30%;
+.calendar_current-day {
+    position: relative;
+    top: 0;
     left: 0;
-    right: 0;
-    margin: 0 auto;
-    display: none;
-    width: 400px;
-    border: 2px solid black;
-    z-index: 1;
-    background-color: aliceblue;
 }
 
-.popup_input {
-    width: 90%;
-    margin-top: 20px;
-    align-self: center;
-}
-
-.popup_button {
-    width: 70%;
-    margin: 20px 0px;
-    align-self: center;
-}
-
-.popup_button_active {
-    display: flex;
-    flex-direction: column;
-}
-
-.table {
-    display: flex;
-    margin-top: 20px;
-}
-
-.invent {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    min-height: 300px;
-    border: 2px solid black;
-    margin: 0;
-    padding: 0;
-}
-
-.invent_data {
-    list-style-type: none;
-    width: 100%;
-    border-bottom: 2px solid black;
-    text-align: center;
-    margin: 0;
-}
-
-.invent_none {
-    list-style-type: none;
-    text-align: center;
-}
-
-.invent_list_element {
-    list-style-type: none;
-    text-align: center;
+.calendar_current-day::after {
+    position: absolute;
+    content: " ";
+    z-index: -1;
+    top: -50%;
+    left: -50%;
+    width: 100px;
+    height: 70px;
+    background-image: url('../img/current-day.svg');
 }
