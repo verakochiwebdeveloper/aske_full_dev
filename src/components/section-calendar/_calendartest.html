@@ -1,64 +1,83 @@
-
-
-    <div class="full__container --container-border-top-none">
-        <div class="calendar-center">
-            <div class="addEvent">
-                <button class="addEvent_button" type="button">Добавить событие</button>
+<section class="calendar">
+    <h2 class="calendar_title">Календарь всех выступлений</h2>
+    <div class="calendar_wrapper">
+        <div class="calendar_table">
+            <div class="calendar_months">
+                <button class="calendar_strelka"><img src="img/strelka-left.svg"></button>
+                <h3 class="calendar_month"></h3>
+                <button class="calendar_strelka"><img src="img/strelka-right.svg"></button>
             </div>
-            <div class="table">
-                <ul class="calendar">
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                </ul>
-                <div class="invent">
-                    <h2 class="invent_data"></h2>
-                        <ul class="invent_list"></ul>
+            <ul class="calendar_days">
+                <li class="calendar_name-day">Пн</li>
+                <li class="calendar_name-day">Вт</li>
+                <li class="calendar_name-day">Ср</li>
+                <li class="calendar_name-day">Чт</li>
+                <li class="calendar_name-day">Пт</li>
+                <li class="calendar_name-day calendar_pink">Сб</li>
+                <li class="calendar_name-day calendar_pink">Вс</li>
+                <button class="calendar_day" type="button"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_current-day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button><button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button><button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button>
+            </ul>
+        </div>
+        <div class="calendar_invent">
+            <div class="calendar_invent">
+                <div class="invent_title-wrapper">
+                    <h3 class="invent_title"></h3>
+                </div>
+                <div class="inventlist">
+                    <div class="inventlist-none">
+                        <h3 class="inventlist-none_title">На этот день нет запланированных событий</h3>
+                        <img class="inventlist_smile" src="img/смайл.png">
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
                 </div>
             </div>
-            <div class="popup">
-                <input class="popup_input" placeholder="Дата">
-                <input class="popup_input" type="time">
-                <input class="popup_input" placeholder="Адрес">
-                <button class="popup_button" type="button">Сохранить изменения</button>
         </div>
     </div>
+    <div class="calendar_footer">
+
+    </div>
+</section>
