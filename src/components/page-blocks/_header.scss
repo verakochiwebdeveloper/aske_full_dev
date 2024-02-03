@@ -59,6 +59,13 @@
     color: #030303;
   }
 
+  &-image {
+    width: 1141px;
+    height: 474px;
+    object-fit: cover;
+    object-position: center;
+  }
+
   &-title {
     width: 690px;
     font-family: "Roboto", sans-serif;
