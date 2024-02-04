@@ -159,7 +159,6 @@ if (dataTitle != null) {
 
 
 
-
 /*
 const calendar = document.querySelector('.calendar'),
 popup = document.querySelector('.popup'),
@@ -206,6 +205,15 @@ const calendarFunc = () => {
             }            
         }
     }
+
+
+    {
+        17.02: [14:40, андрей, москва], [14:40, андрей, москва]
+        19.02: [14:40, андрей, москва]
+    }
+
+
+
     
     fullDate(tableDate)
 
@@ -281,6 +289,8 @@ inventDate.textContent = `${date} ${nameMonth[month]}`;
 
 */
 
+{}
+
 
 //header формы
 
@@ -316,6 +326,7 @@ if (menuBtn != null) {
 
 // Редактирование онформации
 // Открыть модальное окно
+// Проверка на дату
 
 
 const info = document.querySelector('.info'),
@@ -437,8 +448,26 @@ office = () => {
         if (event._isClickWithModal) return;
         event.currentTarget.classList.remove("open");
     });
+},
+monthCheck = () => {
+    const dateInput = document.getElementById('dateInput');
+
+    // Получаем текущую дату
+    const currentDate = new Date();
+
+    // Получаем дату начала текущего месяца
+    const startOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 2);
+
+    // Получаем дату начала следующего месяца
+    const startOfNextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 1);
+
+    // Устанавливаем атрибуты min и max для элемента input
+    dateInput.min = startOfMonth.toISOString().split('T')[0]; // Устанавливаем минимальную дату на начало текущего месяца
+    dateInput.max = startOfNextMonth.toISOString().split('T')[0]; // Устанавливаем максимальную дату на начало следующего месяца
+
 };
 
 if (info != null) {
     office()
+    monthCheck()
 }

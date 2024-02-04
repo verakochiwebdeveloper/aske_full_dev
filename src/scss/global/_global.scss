@@ -214,3 +214,20 @@ ul,li {
   .--background-office {
 	background-color: #292929;
   }
+
+
+
+@media screen and (width < 744px){
+	.height-background {
+		background-color: #2A2929;
+		border-right: 4px solid #000;
+		border-left: 4px solid #000;
+		border-bottom: 4px solid #000;  
+	}
+
+	.container {
+		border-right: none;
+		border-left: none;
+		border-bottom: none	
+	}
+}
