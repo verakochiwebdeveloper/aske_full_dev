@@ -58,6 +58,10 @@
 
 @media screen and (width < 1440px){
 
+    .page-registration {
+        margin: -2px auto 0;
+    }
+
     .page_img-registration {
         width: 675px;
         height: 223px;
@@ -305,4 +309,9 @@
         font-size: 16px;
     }
     
+    .container {
+		border-right: none;
+		border-left: none;
+		border-bottom: none	
+	}
 }

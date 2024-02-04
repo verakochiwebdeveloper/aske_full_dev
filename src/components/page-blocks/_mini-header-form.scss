@@ -172,6 +172,11 @@
 }
 
 @media screen and (width < 744px){
+    .mini-header {
+        border-left: none;
+        border-right: none;
+    }
+
     .mini-header_menu {
         height: 33px;
         justify-content: end;
