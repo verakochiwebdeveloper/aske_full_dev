@@ -27,154 +27,115 @@
 
 
 <body>
-	<!--header для новости-->
-<header class="header ">
-    <div class="full__container flex --container-border-down-none ">
-        <a href="#" class="logo"><img src="/img/logo.svg" alt="Aske Online" class="logo__image"></a>
-        <div class="header__wrapper">
-            <nav class="menu">
-                <ul class="menu__list flex --just space">
-                    <li class="menu__list-item">
-                        <a href="index.html" class="menu__list-link">ГЛАВНАЯ</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a href="#" class="menu__list-link">артисты</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a href="news.html" class="menu__list-link">Новости</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a href="calendar.html" class="menu__list-link">События</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a href="autorization.html" class="menu__list-link">Личный кабинет</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+	<header class="mini-header_calendar">
+    <div class="mini-header_logo-background">
+        <a href="" class="mini-header_logo">
+            <img src="img/image 3 (Traced).svg" class="mini-header_img">
+            <p class="mini-header_logo-text">ASKE.ONLINE</p>
+        </a>
     </div>
+    <nav class="mini-header_menu">
+        <ul class="mini-header_list">
+            <li class="mini-header_list-item"><a href="" class="mini-header_list-link">Главная</a></li>
+            <li class="mini-header_list-item"><a href="" class="mini-header_list-link">Артисты</a></li>
+            <li class="mini-header_list-item"><a href="" class="mini-header_list-link">Новости</a></li>
+            <li class="mini-header_list-item"><a href="" class="mini-header_list-link">События</a></li>
+            <li class="mini-header_list-item"><a href="" class="mini-header_list-link">Личный кабинет</a></li>
+            <li class="mini-header_list-item"><a href="" class="mini-header_list-link">ЛК</a></li>
+        </ul>
+        <button class="mini-header_burger" type="button">
+            <img class="mini-header_burger-img burger-active" src="img/Group 9.svg">
+            <img class="mini-header_burger-img" src="img/close_111152.svg">
+        </button>
+    </nav>
 </header>
-<!--header для новости-->
 	<main class="main">
-	 	
-
-    <div class="full__container --container-border-top-none">
-        <div class="calendar-center">
-            <div class="addEvent">
-                <button class="addEvent_button" type="button">Добавить событие</button>
+	 	<section class="calendar">
+    <h2 class="calendar_title">Календарь всех выступлений</h2>
+    <div class="calendar_wrapper">
+        <div class="calendar_table">
+            <div class="calendar_months">
+                <button class="calendar_strelka"><img src="img/strelka-left.svg"></button>
+                <h3 class="calendar_month"></h3>
+                <button class="calendar_strelka"><img src="img/strelka-right.svg"></button>
             </div>
-            <div class="table">
-                <ul class="calendar">
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                    <li class="calendar_day"></li>
-                </ul>
-                <div class="invent">
-                    <h2 class="invent_data"></h2>
-                        <ul class="invent_list"></ul>
-                </div>
-            </div>
-            <div class="popup">
-                <input class="popup_input" placeholder="Дата">
-                <input class="popup_input" type="time">
-                <input class="popup_input" placeholder="Адрес">
-                <button class="popup_button" type="button">Сохранить изменения</button>
+            <ul class="calendar_days">
+                <li class="calendar_name-day">Пн</li>
+                <li class="calendar_name-day">Вт</li>
+                <li class="calendar_name-day">Ср</li>
+                <li class="calendar_name-day">Чт</li>
+                <li class="calendar_name-day">Пт</li>
+                <li class="calendar_name-day calendar_pink">Сб</li>
+                <li class="calendar_name-day calendar_pink">Вс</li>
+                <button class="calendar_day" type="button"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_current-day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button><button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button><button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day"></button>
+                <button class="calendar_day calendar_pink"></button>
+                <button class="calendar_day calendar_pink"></button>
+            </ul>
         </div>
-    </div>
-		
-	</main>
-	<footer class="footer">
-    <div class="full__container --container-color-black">
-        <div class="footer__wrapper flex --just-space">
-            <div class="footer__info ">
-                <div class="footer__info-material">
-                    <p class="footer__material-text">фотоматериалы  взяты с сайта 
-                        <a target="_blank" href="https://ru.freepik.com" class="footer__material-link">https://ru.freepik.com/</a>
-                    </p>
-                    <div class="footer__info-text">
-                        Поле для редактируемого текста Поле для редактируемого текста Поле для редактируемого текста Поле для редактируемого текста Поле для редактируемого текста Поле для редактируемого текста Поле для редактируемого текста Поле для редактируемого текста Поле для редактируемого текста
+        <div class="calendar_invent">
+            <div class="calendar_invent">
+                <div class="invent_title-wrapper">
+                    <h3 class="invent_title"></h3>
+                </div>
+                <div class="inventlist">
+                    <div class="inventlist-none">
+                        <h3 class="inventlist-none_title">На этот день нет запланированных событий</h3>
+                        <img class="inventlist_smile" src="img/смайл.png">
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
                     </div>
                 </div>
             </div>
-            <div class="footer__links">
-                <p class="footer__links-title">МЕНЮ</p>
-                <ul class="footer__list">
-                    
-                    <li class="footer__list-item">
-                        <a href="index.html" class="footer__list-link">Главная</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a href="#" class="footer__list-link">Артисты</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a href="news.html" class="footer__list-link">Новости</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a href="#" class="footer__list-link">События</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a href="#" class="footer__list-link">Личный кабинет</a>
-                    </li>
-                </ul>
-                <a target="_blank" href="#" class="footer__telegram"><svg class="tg-icon" xmlns="http://www.w3.org/2000/svg" width="44" height="38" viewBox="0 0 44 38" fill="none">
-                    <rect width="44" height="38" fill="black"/>
-                    <path d="M34 8L6 19L16.3158 20.4667M34 8L30.3158 30L16.3158 20.4667M34 8L16.3158 20.4667M16.3158 20.4667V28.5333L21.1038 23.7271" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </a>
-            </div>
         </div>
-        <div class="footer__developer">
-            <a target="_blank" href="https://lad-academy.ru/" class="footer__developer-link">
-                <img src="img/lad__logo.jpg" alt="Академия Лад" class="footer__developer-logo">
-                <p class="footer__developer-title">
-                    Cайт создан ИТ академией ЛАД
-                </p>
-                
-            </a>
-        </div>
-        
     </div>
-</footer>
+    <div class="calendar_footer">
 
+    </div>
+</section>
+
+		
+	</main>
 	<script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 
