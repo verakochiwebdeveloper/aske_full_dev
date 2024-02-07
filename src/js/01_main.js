@@ -20,6 +20,11 @@ calendarMonth = document.querySelector(".calendar_month"),
 strelkaLast = document.querySelectorAll(".calendar_strelka")[0],
 strelkaNext = document.querySelectorAll(".calendar_strelka")[1],
 dataTitle = document.querySelector('.invent_title'),
+inventListBlock = document.querySelector('.calendar_invent'),
+closeInvent = document.querySelector('.calendar_close'),
+inventNone = document.querySelector('.inventlist-none'),
+inventCompleted = document.querySelector('.inventlist-comleted'),
+inventlistFull = document.querySelector('.inventlist-full'),
 nameMonth = {
     0: 'Января',
     1: 'Февраля',
@@ -47,7 +52,34 @@ nameMonthTitle = {
     9: 'Октябрь',
     10: 'Ноябрь',
     11: 'Декабарь' 
+},
+nameMonthNumer = {
+    0: '01',
+    1: '02',
+    2: '03',
+    3: '04',
+    4: '05',
+    5: '06',
+    6: '07',
+    7: '08',
+    8: '09',
+    9: '10',
+    10: '11',
+    11: '12'
 };
+
+
+// для backenda , с этого объекта получаю данные для календаря
+const objInvent = {
+    '17.01': [['артем','нарвская','17:45'],['артем','нарвская','18:45']],
+    '29.01': [['никита','нарвская','17:45'],['андрей','нарвская','18:45']],
+    '05.02': [['артем','нарвская','17:45']],
+    '06.02': [['артем','нарвская','17:45']],
+    '09.02': [['артем','нарвская','18:45'],['артем','нарвская','17:45'],['артем','нарвская','19:45']],
+    '17.02': [['артем','автово','17:45'],['артем','автово','18:45']],
+    '08.03': [['артем','автово','18:45']],
+    '25.03': [['артем','автово','18:45'],['артем','ветеранов','18:45'],['артем','автово','18:45'],['артем','ветеранов','18:45'],['артем','автово','18:45'],['артем','ветеранов','18:45'],['артем','автово','18:45'],['артем','ветеранов','18:45'],['артем','автово','18:45'],['артем','ветеранов','18:45'],['артем','автово','18:45'],['артем','ветеранов','18:45']],
+}
 
 
 let monthCount = 0;
@@ -85,7 +117,8 @@ const calendarFunc = () => {
         for (let i = 0; i < mas.length; i++) {
             const element = mas[i];
             element.textContent = "";
-            element.classList.remove('othermonth')
+            element.classList.remove('othermonth');
+            element.classList.remove('border_date')
         }
         ClearningBackground(tableDate)
     }
@@ -96,10 +129,98 @@ const calendarFunc = () => {
             element.classList.remove('background_date')
         }
     }
+
+    function currentDateClass(mas) {
+        for (let i = 0; i < mas.length; i++) {
+            const element = mas[i];
+            if (element.textContent == date && !element.classList.contains('othermonth')) {
+                element.classList.add('calendar_current-day')
+            }  
+        }
+    }
+
+    function currentDateNone(mas) {
+        for (let i = 0; i < mas.length; i++) {
+            const element = mas[i];
+            element.classList.remove('calendar_current-day')
+        }
+    }
+
+    function inventFullVisible (mas) {
+
+        inventlistFull.innerHTML = "";
+        inventlistFull.classList.add('display_block');
+
+        for (let i = 0; i < mas.length; i++) {
+            const element = mas[i];
+
+            const div = document.createElement('div');
+            const pName = document.createElement('p');
+            const pLocation = document.createElement('p');
+            const pTime = document.createElement('p');
+
+            pName.textContent = element[0];
+            pLocation.textContent = element[1];
+            pTime.textContent = element[2];
+
+            div.classList.add('inventlist-full-div');
+            pName.classList.add('inventlist-full-text');
+            pLocation.classList.add('inventlist-full-text');
+            pTime.classList.add('inventlist-full-text');
+
+            inventlistFull.appendChild(div);
+            div.appendChild(pTime);
+            div.appendChild(pLocation);
+            div.appendChild(pName);
+        }
+    }
+
+    function inventVisible (elemData, elemMonth) {
+
+        inventNone.classList.remove('display_block');
+        inventCompleted.classList.remove('display_block');
+        inventlistFull.classList.remove('display_block');
+
+        if (elemData < 10) {
+            elemData = "0" + elemData
+        }
+        const valueInventObg = objInvent[elemData + '.' + elemMonth];
+        if (valueInventObg === undefined) {
+            inventNone.classList.add('display_block')
+        } else {
+            if (Number(elemData) < date && Number(elemMonth) == month + 1 || Number(elemMonth) < month + 1) {
+                inventCompleted.classList.add('display_block')
+            } else {
+                inventFullVisible(valueInventObg)
+            }
+        }
+        
+    }
     
+    function borderDate () {
+        borderMonth = nameMonthNumer[month + monthCount];
+        for (let i = 0; i < tableDate.length; i++) {
+            const element = tableDate[i];
+            let borderDateText;
+
+            if (!element.classList.contains('othermonth')) {
+                if (Number(element.textContent) < 10) {
+                    borderDateText = "0" + element.textContent + '.' + borderMonth;
+                } else {
+                    borderDateText = element.textContent + '.' + borderMonth;
+                };
+
+                if (objInvent[borderDateText] !== undefined) {
+                    element.classList.add('border_date');
+                }
+            }
+            
+        }
+    }
 
     calendarMonthVisible(month)
     fullDate(tableDate, daysInMonthLast, daysInMonth, daysWeekCurrent)
+    currentDateClass(tableDate)
     
     strelkaLast.addEventListener('click', function() {
         ClearningText(tableDate);
@@ -107,12 +228,16 @@ const calendarFunc = () => {
             fullDate(tableDate, daysInMonthLast, daysInMonth, daysWeekCurrent)
             strelkaNext.classList.remove('display_none')
             calendarMonthVisible(month)
+            currentDateClass(tableDate)
             monthCount--
+            borderDate()
         } else {
             fullDate(tableDate, daysInMonthBeforeLast, daysInMonthLast, daysWeekLast);
             strelkaLast.classList.add('display_none')
             calendarMonthVisible(monthLast)
+            currentDateNone(tableDate)
             monthCount--
+            borderDate()
         }
     })
 
@@ -122,28 +247,47 @@ const calendarFunc = () => {
             fullDate(tableDate, daysInMonthLast, daysInMonth, daysWeekCurrent)
             strelkaLast.classList.remove('display_none')
             calendarMonthVisible(month)
+            currentDateClass(tableDate)
             monthCount++
+            borderDate()
         } else {
             fullDate(tableDate, daysInMonth, daysInMonthNext, daysWeekNext);
             strelkaNext.classList.add('display_none')
             calendarMonthVisible(monthNext)
+            currentDateNone(tableDate)
             monthCount++
+            borderDate()
         }
         
     })
 
 
     calendar.addEventListener("mousedown", (event) => {
-        let data = event.target.textContent;
-        ClearningBackground(tableDate)
+        let data = event.target.textContent,
+        screenWidth = window.innerWidth;
+
+
+        if (screenWidth < 744) {
+            inventListBlock.classList.add('display_block')
+        }
+
         if (!event.target.classList.contains('othermonth') && event.target.classList.contains('calendar_day')) {
+            ClearningBackground(tableDate)
             dataTitle.textContent = `${data} ${nameMonth[month + monthCount]}`;
             event.target.classList.add('background_date');
-        } 
+            inventVisible(data, nameMonthNumer[month + monthCount])
+        }
     });
 
+    closeInvent.addEventListener('click', function() {
+        inventListBlock.classList.remove('display_block')
+    })
 
     dataTitle.textContent = `${date} ${nameMonth[month]}`;
+
+    inventVisible(String(date), nameMonthNumer[month]);
+
+    borderDate()
 
 
 }
@@ -153,143 +297,6 @@ const calendarFunc = () => {
 if (dataTitle != null) {
     calendarFunc()
 }
-
-
-
-
-
-
-/*
-const calendar = document.querySelector('.calendar'),
-popup = document.querySelector('.popup'),
-buttonAdd = document.querySelector('.addEvent_button'),
-buttonSave = document.querySelector('.popup_button'),
-popupInput = document.querySelectorAll('.popup_input')
-inventDate = document.querySelector('.invent_data'),
-invent = document.querySelector('.invent'),
-inventList = document.querySelector('.invent_list'),
-nameMonth = {
-    0: 'Января',
-    1: 'Февраля',
-    2: 'Марта',
-    3: 'Апреля',
-    4: 'Мая',
-    5: 'Июня',
-    6: 'Июля',
-    7: 'Августа',
-    8: 'Сентября',
-    9: 'Октября',
-    10: 'Ноября',
-    11: 'Декабаря' 
-},
-inventObgect = {};
-
-
-//календарь
-
-const calendarFunc = () => {
-    function fullDate(mas) {
-        let count = 1,
-        countMinus = daysInMonthLast + 2 - daysWeek,
-        countPlus = 1;
-        for (let i = 1; i <= mas.length; i++) {
-            const element = mas[i-1];
-            if (i >= daysWeek && daysInMonth >= count) {
-                element.textContent = count++;
-            } else  if (i < daysWeek) {
-                element.textContent = countMinus++;
-                element.classList.add('othermonth')
-            } else {
-                element.textContent = countPlus++;
-                element.classList.add('othermonth')
-            }            
-        }
-    }
-
-
-    {
-        17.02: [14:40, андрей, москва], [14:40, андрей, москва]
-        19.02: [14:40, андрей, москва]
-    }
-
-
-
-    
-    fullDate(tableDate)
-
-    // добавление событий
-
-    buttonAdd.addEventListener('click', function () {
-        popup.classList.add('popup_button_active')
-    })
-
-    buttonSave.addEventListener('click', function () {
-        debugger;
-        let dataObject = popupInput[0].value,
-        timeObject = popupInput[1].value,
-        locationObject = popupInput[2].value;
-        popupInput[0].value = "";
-        popupInput[1].value = "";
-        popupInput[2].value = "";
-        popup.classList.remove('popup_button_active');
-        if(inventObgect[dataObject] == undefined) {
-            inventObgect[dataObject] = [timeObject, locationObject];
-        } else {
-            inventObgect[dataObject].push(timeObject, locationObject)
-        }
-    })
-    
-    calendar.addEventListener("mousedown", (event) => {
-        let data = event.target.textContent;
-        if (!event.target.classList.contains('othermonth')) {
-            inventDate.textContent = `${data} ${nameMonth[month]}`;
-            listInvent(data)
-        } 
-
-    });
-
-    const listInvent = (data) => {
-        if (inventObgect.hasOwnProperty(data)) {
-            let obj = inventObgect[data];
-            inventList.innerHTML = "";
-            for (let i = 0; i < obj.length; i++) {
-                listInventShow(obj[i])
-            } 
-        } else {
-            inventList.innerHTML = "";
-            listInventNone();
-        }
-    }
-
-    const listInventShow = (text) => {
-        let li = document.createElement('li');
-        li.textContent = text
-        li.classList.add('invent_list_element')
-        inventList.appendChild(li);
-    }
-
-    const listInventNone = () => {
-        let li = document.createElement('li');
-        li.textContent = 'на эту дату нет событий';
-        li.classList.add('invent_none');
-        inventList.appendChild(li);
-    }
-
-
-    listInvent()
-}
-
-calendarFunc()
-
-// отображение текущей даты
-
-inventDate.textContent = `${date} ${nameMonth[month]}`;
-
-
-
-*/
-
-{}
 
 
 //header формы
