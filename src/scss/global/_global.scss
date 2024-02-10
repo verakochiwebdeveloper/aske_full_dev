@@ -1,3 +1,10 @@
+:root{
+	// colors:
+	--color-dark: #2A2929;
+	--color-grey: #D9D9D9;
+	--color-pink: #F860E4;
+}
+
 *,
 *::before,
 *::after {
@@ -188,6 +195,7 @@ li {
 	display: block;
 	margin: 100px auto;
 	width: 384px;
+	cursor: pointer;
 
 	&:hover {
 		transition: ease-in 0.2s;
@@ -201,7 +209,5 @@ li {
 }
 
 
-
-// office
 
 

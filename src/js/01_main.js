@@ -125,125 +125,175 @@
 
 // inventDate.textContent = `${date} ${nameMonth[month]}`;
 
+// --------------------------------------------------------------------------------------------------
 
-// popups личного кабинета
+// // popups личного кабинета
 
-// Редактирование онформации
-// Открыть модальное окно
-document.getElementById("open-modal-btn").addEventListener("click", function () {
-    document.getElementById("my-modal").classList.add("open")
-})
-// Закрыть модальное окно
-document.getElementById("close-my-modal-btn").addEventListener("click", function () {
-    document.getElementById("my-modal").classList.remove("open")
-})
+// // Редактирование онформации
+// // Открыть модальное окно
+// document.getElementById("open-modal-btn").addEventListener("click", function () {
+//     document.getElementById("my-modal").classList.add("open")
+// })
+// // Закрыть модальное окно
+// document.getElementById("close-my-modal-btn").addEventListener("click", function () {
+//     document.getElementById("my-modal").classList.remove("open")
+// })
+// // Закрыть модальное окно при нажатии на Esc
+// window.addEventListener('keydown', (e)=>{
+//     if (e.key === "Escape") {
+//         document.getElementById("my-modal").classList.remove("open")
+//     }
+// })
+// // Закрыть модальное окно при клике вне его
+// document.querySelector("#my-modal .modal__box").addEventListener("click", event => {
+//     event._isClickWithModal=true;
+// });
+// document.getElementById("my-modal").addEventListener("click", event => {
+//     if (event._isClickWithModal) return;
+//     event.currentTarget.classList.remove("open");
+// });
+
+// // Добавить социальные сети
+// // Открыть модальное окно
+// document.getElementById("open-modal-btn-social-networks").addEventListener("click", function () {
+//     document.getElementById("my-modal-social-networks").classList.add("open")
+// })
+// // Закрыть модальное окно
+// document.getElementById("close-my-modal-btn-social-networks").addEventListener("click", function () {
+//     document.getElementById("my-modal-social-networks").classList.remove("open")
+// })
+// // Закрыть модальное окно при нажатии на Esc
+// window.addEventListener('keydown', (e)=>{
+//     if (e.key === "Escape") {
+//         document.getElementById("my-modal-social-networks").classList.remove("open")
+//     }
+// })
+// // Закрыть модальное окно при клике вне его
+// document.querySelector("#my-modal-social-networks .modal__box-social-networks").addEventListener("click", event => {
+//     event._isClickWithModal=true;
+// });
+// document.getElementById("my-modal-social-networks").addEventListener("click", event => {
+//     if (event._isClickWithModal) return;
+//     event.currentTarget.classList.remove("open");
+// });
+
+// // Добавить выступления
+// // Открыть модальное окно
+// document.getElementById("open-modal-btn-add-performances").addEventListener("click", function () {
+//     document.getElementById("my-modal-add-performances").classList.add("open")
+// })
+// // Закрыть модальное окно
+// document.getElementById("close-my-modal-btn-add-performances").addEventListener("click", function () {
+//     document.getElementById("my-modal-add-performances").classList.remove("open")
+// })
+// // Закрыть модальное окно при нажатии на Esc
+// window.addEventListener('keydown', (e)=>{
+//     if (e.key === "Escape") {
+//         document.getElementById("my-modal-add-performances").classList.remove("open")
+//     }
+// })
+// // Закрыть модальное окно при клике вне его
+// document.querySelector("#my-modal-add-performances .modal__box-add-performances").addEventListener("click", event => {
+//     event._isClickWithModal=true;
+// });
+// document.getElementById("my-modal-add-performances").addEventListener("click", event => {
+//     if (event._isClickWithModal) return;
+//     event.currentTarget.classList.remove("open");
+// });
+
+// // Посмотреть все выступления
+// // Открыть модальное окно
+// document.getElementById("open-modal-btn-more-performances").addEventListener("click", function () {
+//     document.getElementById("my-modal-more-performances").classList.add("open")
+// })
+// // Закрыть модальное окно
+// document.getElementById("close-my-modal-btn-more-performances").addEventListener("click", function () {
+//     document.getElementById("my-modal-more-performances").classList.remove("open")
+// })
+// // Закрыть модальное окно при нажатии на Esc
+// window.addEventListener('keydown', (e)=>{
+//     if (e.key === "Escape") {
+//         document.getElementById("my-modal-more-performances").classList.remove("open")
+//     }
+// })
+// // Закрыть модальное окно при клике вне его
+// document.querySelector("#my-modal-more-performances .modal__box-more-performances").addEventListener("click", event => {
+//     event._isClickWithModal=true;
+// });
+// document.getElementById("my-modal-more-performances").addEventListener("click", event => {
+//     if (event._isClickWithModal) return;
+//     event.currentTarget.classList.remove("open");
+// });
+
+// // Загрузка фото с выступлений
+// // Открыть модальное окно
+// document.getElementById("open-modal-btn-download-photos").addEventListener("click", function () {
+//     document.getElementById("my-modal-download-photos").classList.add("open")
+// })
+// // Закрыть модальное окно
+// document.getElementById("close-my-modal-btn-download-photos").addEventListener("click", function () {
+//     document.getElementById("my-modal-download-photos").classList.remove("open")
+// })
+// // Закрыть модальное окно при нажатии на Esc
+// window.addEventListener('keydown', (e)=>{
+//     if (e.key === "Escape") {
+//         document.getElementById("my-modal-download-photos").classList.remove("open")
+//     }
+// })
+// // Закрыть модальное окно при клике вне его
+// document.querySelector("#my-modal-download-photos .modal__box-download-photos").addEventListener("click", event => {
+//     event._isClickWithModal=true;
+// });
+// document.getElementById("my-modal-download-photos").addEventListener("click", event => {
+//     if (event._isClickWithModal) return;
+//     event.currentTarget.classList.remove("open");
+// });
+
+// --------------------------------------------------------------------------------------------------
+
+
+// // Посмотреть все выступления-2 (на странице personal-page)
+// // Открыть модальное окно
+// document.getElementById("open-modal-btn-more-performances-2").addEventListener("click", function () {
+//     document.getElementById("my-modal-more-performances-2").classList.add("open")
+// })
+// // Закрыть модальное окно
+// document.getElementById("close-my-modal-btn-more-performances-2").addEventListener("click", function () {
+//     document.getElementById("my-modal-more-performances-2").classList.remove("open")
+// })
+// // Закрыть модальное окно при нажатии на Esc
+// window.addEventListener('keydown', (e)=>{
+//     if (e.key === "Escape") {
+//         document.getElementById("my-modal-more-performances-2").classList.remove("open")
+//     }
+// })
+// // Закрыть модальное окно при клике вне его
+// document.querySelector("#my-modal-more-performances-2 .modal__box-more-performances").addEventListener("click", event => {
+//     event._isClickWithModal=true;
+// });
+// document.getElementById("my-modal-more-performances-2").addEventListener("click", event => {
+//     if (event._isClickWithModal) return;
+//     event.currentTarget.classList.remove("open");
+// });
+
+
+// Открыть и закрыть popup
+document.querySelectorAll('.open-popup').forEach(button => {
+    button.addEventListener('click', function() {
+        let target = this.getAttribute('data-target');
+        document.getElementById(target).classList.add('open');
+    });
+});
+
+document.querySelectorAll('.close-popup').forEach(button => {
+    button.addEventListener('click', function() {
+        this.closest('.modal-more-performances').classList.remove('open');
+    });
+});
+
 // Закрыть модальное окно при нажатии на Esc
 window.addEventListener('keydown', (e)=>{
     if (e.key === "Escape") {
-        document.getElementById("my-modal").classList.remove("open")
+        this.closest('.modal-more-performances').classList.remove('open');
     }
 })
-// Закрыть модальное окно при клике вне его
-document.querySelector("#my-modal .modal__box").addEventListener("click", event => {
-    event._isClickWithModal=true;
-});
-document.getElementById("my-modal").addEventListener("click", event => {
-    if (event._isClickWithModal) return;
-    event.currentTarget.classList.remove("open");
-});
-
-// Добавить социальные сети
-// Открыть модальное окно
-document.getElementById("open-modal-btn-social-networks").addEventListener("click", function () {
-    document.getElementById("my-modal-social-networks").classList.add("open")
-})
-// Закрыть модальное окно
-document.getElementById("close-my-modal-btn-social-networks").addEventListener("click", function () {
-    document.getElementById("my-modal-social-networks").classList.remove("open")
-})
-// Закрыть модальное окно при нажатии на Esc
-window.addEventListener('keydown', (e)=>{
-    if (e.key === "Escape") {
-        document.getElementById("my-modal-social-networks").classList.remove("open")
-    }
-})
-// Закрыть модальное окно при клике вне его
-document.querySelector("#my-modal-social-networks .modal__box-social-networks").addEventListener("click", event => {
-    event._isClickWithModal=true;
-});
-document.getElementById("my-modal-social-networks").addEventListener("click", event => {
-    if (event._isClickWithModal) return;
-    event.currentTarget.classList.remove("open");
-});
-
-// Добавить выступления
-// Открыть модальное окно
-document.getElementById("open-modal-btn-add-performances").addEventListener("click", function () {
-    document.getElementById("my-modal-add-performances").classList.add("open")
-})
-// Закрыть модальное окно
-document.getElementById("close-my-modal-btn-add-performances").addEventListener("click", function () {
-    document.getElementById("my-modal-add-performances").classList.remove("open")
-})
-// Закрыть модальное окно при нажатии на Esc
-window.addEventListener('keydown', (e)=>{
-    if (e.key === "Escape") {
-        document.getElementById("my-modal-add-performances").classList.remove("open")
-    }
-})
-// Закрыть модальное окно при клике вне его
-document.querySelector("#my-modal-add-performances .modal__box-add-performances").addEventListener("click", event => {
-    event._isClickWithModal=true;
-});
-document.getElementById("my-modal-add-performances").addEventListener("click", event => {
-    if (event._isClickWithModal) return;
-    event.currentTarget.classList.remove("open");
-});
-
-// Посмотреть все выступления
-// Открыть модальное окно
-document.getElementById("open-modal-btn-more-performances").addEventListener("click", function () {
-    document.getElementById("my-modal-more-performances").classList.add("open")
-})
-// Закрыть модальное окно
-document.getElementById("close-my-modal-btn-more-performances").addEventListener("click", function () {
-    document.getElementById("my-modal-more-performances").classList.remove("open")
-})
-// Закрыть модальное окно при нажатии на Esc
-window.addEventListener('keydown', (e)=>{
-    if (e.key === "Escape") {
-        document.getElementById("my-modal-more-performances").classList.remove("open")
-    }
-})
-// Закрыть модальное окно при клике вне его
-document.querySelector("#my-modal-more-performances .modal__box-more-performances").addEventListener("click", event => {
-    event._isClickWithModal=true;
-});
-document.getElementById("my-modal-more-performances").addEventListener("click", event => {
-    if (event._isClickWithModal) return;
-    event.currentTarget.classList.remove("open");
-});
-
-// Загрузка фото с выступлений
-// Открыть модальное окно
-document.getElementById("open-modal-btn-download-photos").addEventListener("click", function () {
-    document.getElementById("my-modal-download-photos").classList.add("open")
-})
-// Закрыть модальное окно
-document.getElementById("close-my-modal-btn-download-photos").addEventListener("click", function () {
-    document.getElementById("my-modal-download-photos").classList.remove("open")
-})
-// Закрыть модальное окно при нажатии на Esc
-window.addEventListener('keydown', (e)=>{
-    if (e.key === "Escape") {
-        document.getElementById("my-modal-download-photos").classList.remove("open")
-    }
-})
-// Закрыть модальное окно при клике вне его
-document.querySelector("#my-modal-download-photos .modal__box-download-photos").addEventListener("click", event => {
-    event._isClickWithModal=true;
-});
-document.getElementById("my-modal-download-photos").addEventListener("click", event => {
-    if (event._isClickWithModal) return;
-    event.currentTarget.classList.remove("open");
-});
