@@ -455,6 +455,12 @@ office = () => {
         if (event._isClickWithModal) return;
         event.currentTarget.classList.remove("open");
     });
+    // konstantin
+    window.addEventListener('keydown', (e)=>{
+    if (e.key === "Escape") {
+        this.closest('.modal-more-performances').classList.remove('open');
+    }
+})
 },
 monthCheck = () => {
     const dateInput = document.getElementById('dateInput');
