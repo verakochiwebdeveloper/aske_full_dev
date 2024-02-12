@@ -575,7 +575,7 @@ popupImageOpen = () => {
   imgOpen = (event) => {
     const element = event.target,
     elementSrc = element.src;
-    popupImgContainerFull.classList.toggle('.')
+    popupImgContainerFull.classList.remove('dispay_none')
     if (element.className == 'gallery__photos-img') {
       const img = document.createElement('img'),
       imgClose = document.createElement('button');
@@ -595,6 +595,8 @@ popupImageOpen = () => {
     }
   };
   galery.addEventListener('mousedown', imgOpen);
+  console.log(popupImgContainerFull);
+
 };
 
 personalInfo = () => {
