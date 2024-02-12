@@ -47,6 +47,8 @@
 }
 
 .popup__gallery-img {
+    min-width: 20em;
+    min-height: 20em;
     max-width: 75vw;
     max-height: 75vh;
     margin: 0 auto;
@@ -65,4 +67,11 @@
     cursor: pointer;
     background-image: url(../img/close.svg);
     background-repeat: no-repeat;
+}
+
+@media screen and (width < 744px){
+    .popup__gallery-img {
+        min-width: 10em;
+        min-height: 10em;
+    }
 }
