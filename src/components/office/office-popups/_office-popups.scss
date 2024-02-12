@@ -2,10 +2,24 @@
     // height: 0;
 }
 
+.popups input{
+    border: 1px solid #DBFE01;
+    height: 45px;
+    padding-inline: 10px;
+}
+
+.popups textarea{
+    border: 1px solid #DBFE01;
+    height: 150px;
+    padding-inline: 10px;
+}
+
+.popups input[type="file"]{
+    border: none;
+}
 .popups input[type="file"]:hover {
     border: none;
 }
-
 
 .popups input:hover {
     border: 3px solid #F860F5;

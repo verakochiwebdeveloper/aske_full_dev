@@ -91,9 +91,7 @@
   cursor: pointer;
 }
 
-form {
-  margin-top: 20px;
-}
+
 
 label {
   display: block;
@@ -170,4 +168,14 @@ label {
 .filter-submit {
   cursor: pointer;
   margin: 15px auto;
+}
+
+
+.catalog__wrraper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog__wrraper-left {
+  
 }

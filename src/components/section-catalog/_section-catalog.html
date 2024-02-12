@@ -1,136 +1,24 @@
 <section class="catalog">
   <div class="full__container --bg-catalog --container-border-top-none">
     <h1 class="catalog__title">ПОИСК АРТИСТОВ</h1>
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <span class="close" id="closePopupButton"><svg width="21.457031" height="20.591797" viewBox="0 0 21.457 20.5918" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <desc>
-          
-          </desc>
-          <defs/>
-          <path id="Line 43" d="M1.5625 0.527344L20.9238 20.0586" stroke="#000000" stroke-opacity="1.000000" stroke-width="1.500000"/>
-          <path id="Line 44" d="M0.611328 20.0605L20.1885 0.537109" stroke="#000000" stroke-opacity="1.000000" stroke-width="1.500000"/>
-        </svg>
-        </span>
-        <h2 class="filter__title">Фильтры</h2>
-        <form class="form__filter">
-           <p class="form__filter-title">Жанр</p>
-            <label class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox-input">
-              <span class="custom-checkbox-span"></span>
-              Музыкант
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox-input">
-              <span class="custom-checkbox-span"></span>
-              Певец
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox-input">
-              <span class="custom-checkbox-span"></span>
-              Актер
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox-input">
-              <span class="custom-checkbox-span"></span>
-              Поэт
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox-input">
-              <span class="custom-checkbox-span"></span>
-              Фаерщик
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox-input">
-              <span class="custom-checkbox-span"></span>
-              Танцор
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox-input">
-              <span class="custom-checkbox-span"></span>
-              Художник
-            </label>
-            <label class="custom-checkbox">
-              <input type="checkbox" class="custom-checkbox-input">
-              <span class="custom-checkbox-span"></span>
-              Другое
-            </label>
-            <div class="artistic-genres">
-              <label class="artistic-genres__title"  >
-                Поджанр
-                <select class="artistic-genres__select">
-                  <option value="1">Опция 1</option>
-                  <option value="2">Опция 2</option>
-                  <option value="3">Опция 3</option>
-                </select>
-              </label>
-            </div>
-            <label class="filter-data__data">
-              Дата выступления
-              <input class="filter-data" type="date">
-            </label>
-            <div class="filter-adress">
-              <label class="artistic-genres__title"  >
-                Место выступления
-                <input name="city" list="cities" />
-                  <datalist id="cities">
-                    <option value="Naples">
-                    <option value="London">
-                    <option value="Berlin" >
-                    <option value="New York">
-                    <option value="Frattamaggiore">
-                  </datalist>
-            </div>
     
-            <button class="filter-submit --green-button filter-submit" type="submit">Применить</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="catalog__wrraper flex --catalog-line">
-      <div class="catalog__wrraper-left">
+    <div class="catalog__wrraper  --catalog-line">
+      <div class="catalog__wrraper-left ">
         @@include('../section-catalog/catalog-card-big/_catalog-card-big.html')
-        <div class="catalog__wrraper-cards flex">
+        <div class="catalog__wrapper-small flex">
           @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
           @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
         </div>
-        @@include('../section-catalog/catalog-card-big/_catalog-card-big.html')
-        <div class="catalog__wrraper-cards flex">
-          @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
-          @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
-        </div>
-        @@include('../section-catalog/catalog-card-big/_catalog-card-big.html')
+        
       </div>
       <div class="catalog__wrraper-right">
-        <div class="catalog__wrraper-cards flex">
+        <div class="catalog__wrapper-small flex">
           @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
           @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
         </div>
-        @@include('../section-catalog/catalog-card-big/_catalog-card-big.html')
-        <div class="catalog__wrraper-cards flex">
-          @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
-          @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
-        </div>
-        @@include('../section-catalog/catalog-card-big/_catalog-card-big.html')
-        <div class="catalog__wrraper-cards flex">
-          @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
-          @@include('../section-catalog/catalog-card-small/_catalog-card-small.html')
-        </div>
+          @@include('../section-catalog/catalog-card-big/_catalog-card-big.html')
       </div>
     </div>
   </div>
 </section>
-<section class="catalog-pages">
-  <div class="full__container --bg-catalog">
-    <div class="catalog-pages__wrapper flex">
-      <div class="catalog-pages__list">
-        <a href="#" class="catalog-pages__list-link pagination-link-active"
-          >1</a
-        >
-        <a href="#" class="catalog-pages__list-link pagination-link">...</a>
-        <a href="#" class="catalog-pages__list-link pagination-link">10</a>
-      </div>
-      <a href="#" class="catalog-page__link">НАЙТИ ВЫСТУПЛЕНИЕ</a>
-    </div>
-  </div>
-</section>
+
